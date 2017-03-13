@@ -13,6 +13,9 @@ public class ArrayDemo {
 		myArray = new int[50];
 		myOtherArray = new int[50];
 		
+		// You can also specify what elements are contained in an array directly
+		myArray = new int[]{10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+		
 		// Array indices start at 0
 		System.out.println(myArray[0]);
 		System.out.println(myOtherArray[0]);
@@ -21,7 +24,7 @@ public class ArrayDemo {
 		
 		
 		// EXAMPLE: how to fill an array with numbers 1 to 50?
-		for(int i = 0; i < 50; i++) {
+		for(int i = 0; i < 10; i++) {
 			myArray[i] = i + 1;
 		}
 		
