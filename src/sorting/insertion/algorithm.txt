@@ -1,0 +1,20 @@
+===============
+INSERTION SORT:
+===============
+
+Insertion sort sorts a list by maintaining a sorted sublist.
+Whenever a new element is encountered, it is inserted into the 
+sorted sublist into the right position.
+
+INPUT
+	list: array of items
+	n	: size of list
+
+ALGORITHM
+
+	for i = 1 to n - 1:
+		index = i
+		// Swap the next element into the right position
+		while index > 0 and list[index] < list[index - 1]:
+			swap list[index], list[index - 1]
+			index--

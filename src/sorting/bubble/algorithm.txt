@@ -1,0 +1,27 @@
+============
+BUBBLE SORT:
+============
+
+Bubble sort sorts a list by comparing each element with its neighbour,
+and doing a swap when it is larger than its neighbour. 
+
+
+INPUT
+	list: array of items
+	n	: size of list
+
+ALGORITHM
+	for i = 0 to n - 1:
+		
+		swapped = false
+			
+		for j = 0 to n - 2:
+			// Compare adjacent elements
+			if list[j] > list[j + 1]:
+				swap list[j], list[j + 1]
+				swapped = true
+		
+		// No more swaps 
+		if not swapped:
+			brea
+				

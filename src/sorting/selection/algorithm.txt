@@ -1,0 +1,23 @@
+===============
+SELECTION SORT:
+===============
+
+Selection sort sorts a list by selecting the smallest element in the 
+non-sorted part of the list and swapping it into position.
+
+INPUT
+	list: array of items
+	n	: size of list
+
+ALGORITHM
+	for i = 0 to n - 1:
+		minIndex = i
+		
+		// Find the minimum element
+		for j = i to n - 1:
+			if list[j] < list[minIndex]:
+				minIndex = j 
+				
+		// Swap the minimum element
+		if i != minIndex
+			swap list[i], list[minIndex]
