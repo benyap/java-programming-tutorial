@@ -2,8 +2,8 @@ package adt.demo;
 
 public class Demo {
 	public static void main(String[] args) {
-		//demoLinkedIntegerList();
-		demoGenericList();
+		demoLinkedIntegerList();
+		//demoGenericList();
 	}
 	
 	
@@ -29,7 +29,7 @@ public class Demo {
 		list.add(1);
 		System.out.println(list);
 		System.out.println("Item @ index 4: " + list.get(4));
-		list.remove(1);
+		list.remove(10);
 		//list.insert(0, 0);
 		//list.remove(9);
 		System.out.println(list);

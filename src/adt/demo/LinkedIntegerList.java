@@ -48,17 +48,26 @@ public class LinkedIntegerList {
 	
 	
 	public boolean remove(int item) {
+		if (head == null) return false;
+
 		boolean removed = false;
 		
-		Node node = head;
-
+		// prehead
+		Node node = new Node(0);
+		node.setNext(head);
+		
 		while(node.next() != null) {
 			// Check if node needs to be removed
 			if (node.next().getValue() == item) {
 				removed = true;
+				// check if the node being removed is the head
+				if (node.next() == head) {
+					head = node.next().next();
+				}
 				node.setNext(node.next().next());
 				size--;
 			}
+			// if no node was removed, advance the node
 			else node = node.next();
 		}
 		
