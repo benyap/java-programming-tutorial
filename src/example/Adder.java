@@ -3,11 +3,14 @@
  * @author bwyap
  */
 
+package example;
+
 import java.util.Scanner;
 
 public class Adder {
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		
 		String input = null;

@@ -3,6 +3,8 @@
  * @author bwyap
  */
 
+package example;
+
 public class HelloWorld {
 	
 	// The main method is the entry point of the program

@@ -3,6 +3,8 @@
  * @author bwyap
  */
 
+package example;
+
 import java.util.Scanner;
 
 public class MergeSort {
@@ -51,6 +53,7 @@ public class MergeSort {
 			System.out.print(sorted[i] + " ");
 		}
 		System.out.println();
+		scan.close();
 	}
 	
 	

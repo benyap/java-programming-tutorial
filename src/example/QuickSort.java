@@ -3,6 +3,8 @@
  * @author bwyap
  */
 
+package example;
+
 import java.util.Scanner;
 
 public class QuickSort {
@@ -51,6 +53,7 @@ public class QuickSort {
 			System.out.print(sorted[i] + " ");
 		}
 		System.out.println();
+		scan.close();
 	}
 	
 	

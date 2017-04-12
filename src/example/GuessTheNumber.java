@@ -3,6 +3,8 @@
  * @author bwyap
  */
 
+package example;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -97,6 +99,7 @@ public class GuessTheNumber {
 		
 		// Game finished
 		System.out.println("Thanks for playing.");
+		scan.close();
 	}
 	
 	
