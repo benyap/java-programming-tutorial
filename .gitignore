@@ -14,3 +14,5 @@ hs_err_pid*
 
 # ignore tutorial packages
 src/tutorial/
+
+*Demo.java
