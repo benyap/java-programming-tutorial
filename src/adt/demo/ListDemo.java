@@ -1,6 +1,6 @@
 package adt.demo;
 
-public class Demo {
+public class ListDemo {
 	public static void main(String[] args) {
 		demoLinkedIntegerList();
 		//demoGenericList();
@@ -19,7 +19,7 @@ public class Demo {
 		list.add(1);
 		list.add(8);
 		list.add(1);
-		list.add(9);
+		list.add(9);;
 		list.add(1);
 		list.add(1);
 		list.add(9);
