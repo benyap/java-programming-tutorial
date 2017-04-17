@@ -68,16 +68,18 @@ public abstract class GenericHashtable<K,V> implements HashtableInterface<K, V> 
 		return table.length;
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public String toString() {
 		String s = "{";
 		for (int i = 0; i < table.length; i++) {
 			if (keys[i] != null) {
+				s += "[h=" + hash((K)keys[i]) + ",i=" + i + "]";
 				s += keys[i] + ":";
 				s += table[i] + ", ";
 			}
 		}
-		return s.substring(0, s.length() - 2) + "}";
+		return s.length() > 2 ? s.substring(0, s.length() - 2) + "}" : "{}";
 	}
 	
 }
