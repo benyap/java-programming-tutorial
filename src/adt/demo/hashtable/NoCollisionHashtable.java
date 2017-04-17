@@ -22,7 +22,7 @@ public class NoCollisionHashtable<K, V> extends GenericHashtable<K, V>{
 	}
 
 	@Override
-	protected void collision(K key, int pos, V value) {
+	protected void putCollision(K key, int pos, V value) {
 		throw new RuntimeException("Collision occurred for keys '" + key + "' and '" + keys[pos] + "'");
 	}
 

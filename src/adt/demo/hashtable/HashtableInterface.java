@@ -24,4 +24,22 @@ public interface HashtableInterface<K, V> {
 	 */
 	public void remove(K key);
 	
+	/**
+	 * Get the number of objects in the hashtable
+	 * @return
+	 */
+	public int size();
+	
+	/**
+	 * Get the current capacity of the hashtable
+	 * @return
+	 */
+	public int capacity();
+	
+	/**
+	 * Hash function that turns the key into a integer hash
+	 * @param key
+	 * @return
+	 */
+	public int hash(K key);
 }

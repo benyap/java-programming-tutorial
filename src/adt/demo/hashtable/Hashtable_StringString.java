@@ -11,13 +11,12 @@ public class Hashtable_StringString implements HashtableInterface<String, String
 	
 	private String[] table;
 	private String[] keys;
-	
+	private int size;
 	
 	public Hashtable_StringString() {
 		table = new String[DEFAULT_SIZE];
 		keys = new String[DEFAULT_SIZE];
 	}
-	
 	
 	@Override
 	public void put(String key, String value) {
@@ -26,6 +25,7 @@ public class Hashtable_StringString implements HashtableInterface<String, String
 		if (keys[pos] == key || keys[pos] == null) {
 			table[pos] = value;
 			keys[pos] = key;
+			size++;
 		}
 		else {
 			throw new RuntimeException("Collision occurred for keys '" + key + "' and '" + keys[pos] + "'");
@@ -48,6 +48,7 @@ public class Hashtable_StringString implements HashtableInterface<String, String
 			throw new RuntimeException("No value exists for key '" + key + "'");
 		}
 		keys[pos] = null;
+		size--;
 	}
 	
 	/**
@@ -64,6 +65,21 @@ public class Hashtable_StringString implements HashtableInterface<String, String
 		    hash = hash * prime + s.charAt(i);
 		}
 		return hash % size;
+	}
+	
+	@Override
+	public int hash(String key) {
+		return hash(key, table.length);
+	}
+	
+	@Override
+	public int size() {
+		return size;
+	}
+	
+	@Override
+	public int capacity() {
+		return table.length;
 	}
 	
 	@Override

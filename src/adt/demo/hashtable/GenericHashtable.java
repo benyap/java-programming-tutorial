@@ -6,11 +6,18 @@ public abstract class GenericHashtable<K,V> implements HashtableInterface<K, V> 
 	
 	protected Object[] table;
 	protected Object[] keys;
+	protected int size;
+	
+	public GenericHashtable(int size) {
+		table = new Object[size];
+		keys = new Object[size];
+		size = 0;
+	}
 	
 	public GenericHashtable() {
-		table = new Object[DEFAULT_SIZE];
-		keys = new Object[DEFAULT_SIZE];
+		this(DEFAULT_SIZE);
 	}
+
 	
 	@Override
 	public void put(K key, V value) {
@@ -19,9 +26,10 @@ public abstract class GenericHashtable<K,V> implements HashtableInterface<K, V> 
 		if (keys[pos] == key || keys[pos] == null) {
 			table[pos] = value;
 			keys[pos] = key;
+			size++;
 		}
 		else {
-			collision(key, pos, value);
+			putCollision(key, pos, value);
 		}
 	}
 	
@@ -32,7 +40,7 @@ public abstract class GenericHashtable<K,V> implements HashtableInterface<K, V> 
 	 * @param pos the hashed position of the key
 	 * @param value the value attached to the key
 	 */
-	protected abstract void collision(K key, int pos, V value);
+	protected abstract void putCollision(K key, int pos, V value);
 	
 	/**
 	 * Hash function to transform an object into an integer value
@@ -40,9 +48,24 @@ public abstract class GenericHashtable<K,V> implements HashtableInterface<K, V> 
 	 * @param size the size to modulus the result by
 	 * @return
 	 */
-	protected int hash(K s, int size) {
+	public int hash(K key, int size) {
 		// used default Object hashcode method
-		return s.hashCode() % size;
+		return key.hashCode() % size;
+	}
+	
+	@Override
+	public int hash(K key) {
+		return this.hash(key, table.length);
+	}
+	
+	@Override
+	public int size() {
+		return size;
+	}
+	
+	@Override
+	public int capacity() {
+		return table.length;
 	}
 	
 	@Override
