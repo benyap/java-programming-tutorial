@@ -5,7 +5,7 @@ package adt.demo.hashtable;
  * @author bwyap
  *
  */
-public class Hashtable_StringString {
+public class Hashtable_StringString implements HashtableInterface<String, String>{
 	
 	public static final int DEFAULT_SIZE = 100;
 	
@@ -19,13 +19,7 @@ public class Hashtable_StringString {
 	}
 	
 	
-	/**
-	 * Put a key-value pair into the hashtable.
-	 * If a key-value pair is already in that location, 
-	 * it is overridden if the key matches.
-	 * @param key
-	 * @param value
-	 */
+	@Override
 	public void put(String key, String value) {
 		int pos = hash(key, table.length);
 		// fill empty slot or slot with the same key
@@ -38,12 +32,7 @@ public class Hashtable_StringString {
 		}
 	}
 	
-	
-	/**
-	 * Retrieve the value of a key if it exists
-	 * @param key
-	 * @return
-	 */
+	@Override
 	public String get(String key) {
 		int pos = hash(key, table.length);
 		if (keys[pos] == null) {
@@ -52,11 +41,7 @@ public class Hashtable_StringString {
 		return table[pos];
 	}
 	
-	
-	/**
-	 * Remove a value of a key if it exists
-	 * @param key
-	 */
+	@Override
 	public void remove(String key) {
 		int pos = hash(key, table.length);
 		if (keys[pos] == null) {
@@ -64,7 +49,6 @@ public class Hashtable_StringString {
 		}
 		keys[pos] = null;
 	}
-
 	
 	/**
 	 * Hash function to transform a String into an integer value
@@ -81,7 +65,6 @@ public class Hashtable_StringString {
 		}
 		return hash % size;
 	}
-	
 	
 	@Override
 	public String toString() {
