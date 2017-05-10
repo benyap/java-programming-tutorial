@@ -18,3 +18,4 @@ ALGORITHM
 		while index > 0 and list[index] < list[index - 1]:
 			swap list[index], list[index - 1]
 			index--
+			

@@ -23,5 +23,4 @@ ALGORITHM
 		
 		// No more swaps 
 		if not swapped:
-			brea
-				
+			break

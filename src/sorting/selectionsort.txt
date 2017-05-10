@@ -21,3 +21,4 @@ ALGORITHM
 		// Swap the minimum element
 		if i != minIndex
 			swap list[i], list[minIndex]
+						
