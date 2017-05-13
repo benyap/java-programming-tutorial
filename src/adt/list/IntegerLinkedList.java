@@ -1,13 +1,13 @@
 package adt.list;
 
-public class LinkedIntegerList {
+public class IntegerLinkedList {
 	
 	private int size;
 	private Node head;
 	private Node tail;
 	
 	
-	public LinkedIntegerList() {
+	public IntegerLinkedList() {
 		size = 0;
 		head = null;
 		tail = null;

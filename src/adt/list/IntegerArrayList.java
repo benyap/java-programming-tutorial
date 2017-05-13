@@ -1,6 +1,6 @@
 package adt.list;
 
-public class IntegerList {
+public class IntegerArrayList {
 
 	
 	/*
@@ -21,7 +21,7 @@ public class IntegerList {
 	private final int INITIAL_SIZE = 5;
 	
 	
-	public IntegerList() {
+	public IntegerArrayList() {
 		size = 0;
 		clear();
 	}
