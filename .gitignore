@@ -22,3 +22,4 @@ Demo*.java
 
 .classpath
 .project
+*.DS_Store
