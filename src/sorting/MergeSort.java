@@ -47,28 +47,28 @@ public class MergeSort extends IntegerArraySorter {
 			aux[i] = array[i];
 		}
 		
-		int i = lo;
-		int j = mid + 1;
-		int k = lo;
+		int left = lo;
+		int right = mid + 1;
+		int index = lo;
 		
 		// Move the lower of other element of the 
 		//two partitions into the array
-		while(i <= mid && j <= hi) {
-			if (aux[i] <= aux[j]) {
-				array[k++] = aux[i++];
+		while(left <= mid && right <= hi) {
+			if (aux[left] <= aux[right]) {
+				array[index++] = aux[left++];
 			}
 			else {
-				array[k++] = aux[j++];
+				array[index++] = aux[right++];
 			}
 		}
 		
 		// Move any leftover elements into the array
-		while (i <= mid) {
-			array[k++] = aux[i++];
+		while (left <= mid) {
+			array[index++] = aux[left++];
 		}
 		
-		while (j <= hi) {
-			array[k++] = aux[j++];
+		while (right <= hi) {
+			array[index++] = aux[right++];
 		}
 	}
 	
