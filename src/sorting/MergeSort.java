@@ -16,8 +16,7 @@ public class MergeSort extends IntegerArraySorter {
 	}
 	
 	/**
-	 * Sort the numbers in the array between 
-	 * the given indexes recursively.
+	 * Sort the numbers in the array between the given indexes recursively.
 	 * @param lo the beginning index
 	 * @param hi the end index
 	 */
@@ -35,8 +34,7 @@ public class MergeSort extends IntegerArraySorter {
 	}
 	
 	/**
-	 * Merge the two partitions indicated
-	 * by the given indexes.
+	 * Merge the two partitions indicated by the given indexes.
 	 * @param lo
 	 * @param mid
 	 * @param hi
