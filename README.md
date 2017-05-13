@@ -1,15 +1,27 @@
 # Java Programming tutorial
-Learn programming concepts through Java.
+A repository of programming concepts and examples in Java.
 
-## Basic examples
-A set of basic programs for gauging programming experience.
-These are found in the ```cmd/examples ``` folder.
+## Binary converter
+The `binaryconverter` package contains algorithms to convert a binary number to decimal format and vice versa. 
 
-1. _Hello World_ : A basic program that prints "Hello World!" to the console.
+## Abstract data types
+The `adt` package contains code demos for a custom implementation of the following abstract data types:
 
-2. _Adder_ : A program that allows you to sum a set of numbers.
+### List
+The `adt.list` package contains two implementations for a list ADT that holds integers, in the form of a linked list and array list. 
+There is also an implementation of a generic array list that uses a custom List interface.
 
-3. _Guess the number_ : A simple number guessing game.
+### Hashtable
+The `adt.hashtable` package contains a String to String hashtable implementation and an example of a generic hashtable. The generic hashtable, being an abstract class, leaves the collision resolution to a concrete sub class to handle. Provided is a concrete implementation of a hashtable that does **not** handle collisions.
 
-4. _Sorting_ : A set of programs for sorting a set of numbers. Algorithms included: merge sort, quick sort.
+## Sorting
+The `sorting` package contains implementations of various sorting algorithms. They all inherit the `Sorter` abstract class, which provides a method to sort an Object and a method to verify that the Object is sorted. 
 
+The sorting algorithms provided are written to sort integer arrays, and all inherit the `IntegerArraySorter` class which provides a verification method. 
+
+The following sorting algorithms have been implemented:
+- Bubble sort
+- Selection sort
+- Insertion sort
+- Merge sort
+- Quick sort
