@@ -17,9 +17,10 @@ public abstract class Sorter<T> {
 	
 	/**
 	 * Verify that the list is sorted
-	 * @param list
+	 * @param original the original list
+	 * @param sorted the sorted list
 	 * @return
 	 */
-	public abstract boolean verify(T list);
+	public abstract boolean verify(T original, T sorted);
 		
 }
