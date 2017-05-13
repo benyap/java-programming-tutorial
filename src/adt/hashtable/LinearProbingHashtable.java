@@ -1,4 +1,4 @@
-package adt.demo.hashtable;
+package adt.hashtable;
 
 public class LinearProbingHashtable<K, V> extends GenericHashtable<K, V> {
 

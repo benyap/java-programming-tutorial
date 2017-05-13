@@ -1,4 +1,4 @@
-package adt.demo;
+package adt.list;
 
 public class GenericArrayList<E> implements ListInterface<E> {
 	

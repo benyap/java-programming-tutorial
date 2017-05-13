@@ -1,4 +1,4 @@
-package adt.demo.hashtable;
+package adt.hashtable;
 
 /**
  * A custom hashtable implementation that maps String -> Integer

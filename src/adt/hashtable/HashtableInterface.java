@@ -1,4 +1,4 @@
-package adt.demo.hashtable;
+package adt.hashtable;
 
 public interface HashtableInterface<K, V> {
 

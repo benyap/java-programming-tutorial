@@ -1,4 +1,4 @@
-package adt.demo.hashtable;
+package adt.hashtable;
 
 public abstract class GenericHashtable<K,V> implements HashtableInterface<K, V> {
 	
