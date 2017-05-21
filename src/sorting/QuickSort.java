@@ -12,7 +12,7 @@ public class QuickSort extends IntegerArraySorter {
 		// Call the recursive quicksort function
 		quicksort(0, list.length - 1);
 		
-		return list;
+		return array;
 	}
 	
 	/**
