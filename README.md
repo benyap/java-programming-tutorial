@@ -14,6 +14,9 @@ There is also an implementation of a generic array list that uses a custom List 
 ### Hashtable
 The `adt.hashtable` package contains a String to String hashtable implementation and an example of a generic hashtable. The generic hashtable, being an abstract class, leaves the collision resolution to a concrete sub class to handle. Provided is a concrete implementation of a hashtable that does **not** handle collisions.
 
+### Graph
+The `adt.graph` package contains two implementations for a graph ADT using an adjacency list and an adjacency matrix. Strings are used to represent a vertex. 
+
 ## Sorting
 The `sorting` package contains implementations of various sorting algorithms. They all inherit the `Sorter` abstract class, which provides a method to sort an Object and a method to verify that the Object is sorted. 
 
