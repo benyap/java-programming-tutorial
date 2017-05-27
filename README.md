@@ -17,6 +17,12 @@ The `adt.hashtable` package contains a String to String hashtable implementation
 ### Graph
 The `adt.graph` package contains two implementations for a graph ADT using an adjacency list and an adjacency matrix. Strings are used to represent a vertex. 
 
+## Problem solving
+The `problemsolving` package contains implementations of various problem solving examples. 
+
+The following problems have a sample solution:
+- Fake Coin (12 coins)
+
 ## Sorting
 The `sorting` package contains implementations of various sorting algorithms. They all inherit the `Sorter` abstract class, which provides a method to sort an Object and a method to verify that the Object is sorted. 
 
