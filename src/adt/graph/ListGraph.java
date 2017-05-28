@@ -78,7 +78,7 @@ public class ListGraph implements GraphInterface {
 		// Ensure vertices exist
 		if (hasVertex(vertexA) && hasVertex(vertexB)) {
 			// Remove vertexB from vertexA's adjacency list
-			v.get(vertexA).remove(vertexB);	
+			return v.get(vertexA).remove(vertexB);	
 		}
 		return false;
 	}
@@ -116,7 +116,7 @@ public class ListGraph implements GraphInterface {
 		// Ensure vertex exists
 		if (!hasVertex(vertex)) return null;
 		// Get neighbours of vertex
-		return v.get(vertex);
+		return new ArrayList<String>(v.get(vertex));
 	}
 	
 	@Override
