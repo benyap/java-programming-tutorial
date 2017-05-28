@@ -1,8 +1,8 @@
-package adt.graph;
+package adt.graph.algorithms;
 
 import java.util.List;
 
-import adt.graph.algorithms.GraphChecker;
+import adt.graph.UndirectedGraphInterface;
 
 /**
  * A class that provides a basic implementation of Prim's Algorithm
