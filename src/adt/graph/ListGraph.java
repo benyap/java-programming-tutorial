@@ -11,7 +11,7 @@ import java.util.Map;
  * @author bwyap
  *
  */
-public class ListGraph implements GraphInterface {
+public class ListGraph extends Graph {
 
 	/**
 	 * A mapping of vertices to a list of adjacent vertices
@@ -22,7 +22,7 @@ public class ListGraph implements GraphInterface {
 	 * Create an empty Graph
 	 */
 	public ListGraph() {
-		v = new HashMap<String, List<String>>();
+		clear();
 	}
 	
 	/**
@@ -120,14 +120,8 @@ public class ListGraph implements GraphInterface {
 	}
 	
 	@Override
-	public int edgeCount(String vertexA, String vertexB) {
-		if (!adjacent(vertexA, vertexB)) return 0;
-		List<String> neighbours = getNeighbours(vertexA);
-		int count = 0;
-		for(String n : neighbours) {
-			if (n == vertexB) count++;
-		}
-		return count;
+	public void clear() {
+		v = new HashMap<String, List<String>>();
 	}
 	
 	@Override

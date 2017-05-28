@@ -11,7 +11,7 @@ import java.util.Map;
  * @author bwyap
  *
  */
-public class MatrixGraph implements GraphInterface {
+public class MatrixGraph extends Graph {
 	
 	/**
 	 * The adjacency matrix
@@ -33,8 +33,7 @@ public class MatrixGraph implements GraphInterface {
 	 * Create an empty Graph
 	 */
 	public MatrixGraph() {
-		vertices = new HashMap<String, Integer>();
-		indices = new ArrayList<String>();
+		clear();
 	}
 
 	/**
@@ -170,14 +169,9 @@ public class MatrixGraph implements GraphInterface {
 	}
 	
 	@Override
-	public int edgeCount(String vertexA, String vertexB) {
-		if (!adjacent(vertexA, vertexB)) return 0;
-		List<String> neighbours = getNeighbours(vertexA);
-		int count = 0;
-		for(String n : neighbours) {
-			if (n == vertexB) count++;
-		}
-		return count;
+	public void clear() {
+		vertices = new HashMap<String, Integer>();
+		indices = new ArrayList<String>();
 	}
 	
 	@Override

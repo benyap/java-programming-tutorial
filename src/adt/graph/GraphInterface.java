@@ -57,6 +57,12 @@ public interface GraphInterface {
 	// Other useful methods
 	
 	/**
+	 * Clear the tree.
+	 * Removes all edges and vertices.
+	 */
+	public void clear();
+	
+	/**
 	 * Check if the vertex exists.
 	 * @param vertex
 	 * @return true if the vertex exists, false otherwise.
