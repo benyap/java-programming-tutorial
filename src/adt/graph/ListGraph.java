@@ -102,6 +102,24 @@ public class ListGraph implements GraphInterface {
 	}
 	
 	@Override
+	public List<String> getVertices() {
+		// Get list of all vertices
+		List<String> vertices = new ArrayList<String>();
+		for(String s : v.keySet()) {
+			vertices.add(s);
+		}
+		return vertices;
+	}
+	
+	@Override
+	public List<String> getNeighbours(String vertex) {
+		// Ensure vertex exists
+		if (!hasVertex(vertex)) return null;
+		// Get neighbours of vertex
+		return v.get(vertex);
+	}
+	
+	@Override
 	public String toString() {
 		String s = "\n";
 		

@@ -1,5 +1,7 @@
 package adt.graph;
 
+import java.util.List;
+
 /**
  * This interface provides methods that a graph should provide,
  * using Strings to uniquely identify vertices.
@@ -60,4 +62,19 @@ public interface GraphInterface {
 	 * @return true if the vertex exists, false otherwise.
 	 */
 	public boolean hasVertex(String vertex);
+	
+	/**
+	 * Get a list of all vertices in the graph
+	 * @return
+	 */
+	public List<String> getVertices();
+	
+	/**
+	 * Get the neighbours of a specified vertex.
+	 * Returns null if vertex doesn't exist. 
+	 * @param vertex
+	 * @return
+	 */
+	public List<String> getNeighbours(String vertex);
+	
 }

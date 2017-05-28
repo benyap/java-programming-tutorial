@@ -146,6 +146,30 @@ public class MatrixGraph implements GraphInterface {
 	}
 	
 	@Override
+	public List<String> getVertices() {
+		// Get list of all vertices
+		List<String> vertices = new ArrayList<String>();
+		for(String s : this.vertices.keySet()) {
+			vertices.add(s);
+		}
+		return vertices;
+	}
+	
+	@Override
+	public List<String> getNeighbours(String vertex) {
+		// Check that vertex exists
+		if (!hasVertex(vertex)) return null;
+		
+		// Get all vertices in matrix that are adjacent to vertex
+		List<String> neighbours = new ArrayList<String>();
+		int vertex_i = vertices.get(vertex);
+		for(int i = 0; i < array[vertex_i].length; i++) {
+			if (array[vertex_i][i] > 0) neighbours.add(indices.get(i));
+		}
+		return neighbours;
+	}
+	
+	@Override
 	public String toString() {
 		if (array == null) return "\n";
 		
