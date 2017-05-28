@@ -8,7 +8,7 @@ package adt.graph;
  * @author bwyap
  *
  */
-public class ListUGraph extends ListGraph {
+public class ListUGraph extends ListGraph implements UndirectedGraphInterface {
 	
 	/**
 	 * Time complexity: O(1)

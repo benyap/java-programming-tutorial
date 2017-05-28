@@ -8,7 +8,7 @@ package adt.graph;
  * @author bwyap
  *
  */
-public class MatrixUGraph extends MatrixGraph {
+public class MatrixUGraph extends MatrixGraph implements UndirectedGraphInterface {
 	
 	/**
 	 * Time complexity: O(1)
