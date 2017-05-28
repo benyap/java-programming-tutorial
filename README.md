@@ -15,7 +15,16 @@ There is also an implementation of a generic array list that uses a custom List 
 The `adt.hashtable` package contains a String to String hashtable implementation and an example of a generic hashtable. The generic hashtable, being an abstract class, leaves the collision resolution to a concrete sub class to handle. Provided is a concrete implementation of a hashtable that does **not** handle collisions.
 
 ### Graph
-The `adt.graph` package contains two implementations for a graph ADT using an adjacency list and an adjacency matrix. Strings are used to represent a vertex. 
+The `adt.graph` package contains implementations for a graph ADT using an adjacency list and an adjacency matrix. Strings are used to represent a vertex. Undirected graph implementations are also provided. All graphs use the `GraphInterface` which provides common methods available across all implementations.
+
+### Graph Algorithms
+The `adt.graph.algorithms` package contains algorithms that deal with graphs. The algorithms for the following have been implemented:
+- Prim's algorithm for a spanning tree (note that this does not find the MST)
+- Check if a graph is weakly connected
+- Check if a graph contains a cycle
+- Check if a graph is simple
+- Check if a graph is a tree
+- Check if a graph is a valid spanning tree
 
 ## Problem solving
 The `problemsolving` package contains implementations of various problem solving examples. 
