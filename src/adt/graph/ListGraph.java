@@ -120,6 +120,17 @@ public class ListGraph implements GraphInterface {
 	}
 	
 	@Override
+	public int edgeCount(String vertexA, String vertexB) {
+		if (!adjacent(vertexA, vertexB)) return 0;
+		List<String> neighbours = getNeighbours(vertexA);
+		int count = 0;
+		for(String n : neighbours) {
+			if (n == vertexB) count++;
+		}
+		return count;
+	}
+	
+	@Override
 	public String toString() {
 		String s = "\n";
 		

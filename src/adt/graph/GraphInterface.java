@@ -77,4 +77,12 @@ public interface GraphInterface {
 	 */
 	public List<String> getNeighbours(String vertex);
 	
+	/**
+	 * Get the number of edges that connect vertexA to vertexB 
+	 * @param vertexA
+	 * @param vertexB
+	 * @return
+	 */
+	public int edgeCount(String vertexA, String vertexB);
+	
 }
