@@ -26,12 +26,6 @@ The `adt.graph.algorithms` package contains algorithms that deal with graphs. Th
 - Check if a graph is a tree
 - Check if a graph is a valid spanning tree
 
-## Problem solving
-The `problemsolving` package contains implementations of various problem solving examples. 
-
-The following problems have a sample solution:
-- Fake Coin (12 coins)
-
 ## Sorting
 The `sorting` package contains implementations of various sorting algorithms. They all inherit the `Sorter` abstract class, which provides a method to sort an Object and a method to verify that the Object is sorted. 
 
@@ -43,3 +37,18 @@ The following sorting algorithms have been implemented:
 - Insertion sort
 - Merge sort
 - Quick sort
+
+## Problem solving
+The `problemsolving` package contains implementations of various problem solving examples. 
+
+The following problems have a sample solution:
+- Fake Coin (12 coins)
+
+## Competition sample solutions
+The `comp` package contains sample solutions to programming competition tasks.
+The following task sets have solutions (links can be found in the source file):
+* UNSW High Schools Programming Competition 2015: Open Round
+
+## Exercise Solutions
+The `solutions` package contains sample solutions to problem solving tasks.
+The problem statement can be found in the source file.
