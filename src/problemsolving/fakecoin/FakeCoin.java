@@ -22,7 +22,7 @@ class FakeCoin {
 		}
 		
 		// Create a fake coin
-		// Note that there is a chance that the fake coin (x) weighs the same as the others.
+		// Note that there is a chance that the fake coin weighs the same as the others.
 		// In this case, the algorithm will not be able to find the fake coin by using the weight.
 		Random r = new Random();
 		int index = r.nextInt(12);
