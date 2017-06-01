@@ -25,7 +25,8 @@ class FakeCoin {
 		// Note that there is a chance that the fake coin (x) weighs the same as the others.
 		// In this case, the algorithm will not be able to find the fake coin by using the weight.
 		Random r = new Random();
-		coins[r.nextInt(12)] = new Coin("x", (r.nextInt(19) + 1));
+		int index = r.nextInt(12);
+		coins[index] = new Coin(coins[index].id, (r.nextInt(19) + 1));
 		
 		// Print all coins
 		for(Coin c : coins) {
